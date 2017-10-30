@@ -1,0 +1,34 @@
+.gtwrap {
+  position: relative;
+
+  &__in {
+    position: relative;
+    overflow: auto;
+  }
+
+  &__left, &__right {
+    position: absolute;
+    height: 100%;
+    width: 20px;
+    top: 0;
+    opacity: 0;
+    transition: opacity 0.1s linear 0s, visibility 0s linear 0.1s;
+    z-index: 1;
+
+    &.visible {
+      opacity: 1;
+      transition: opacity 0.1s linear 0s, visibility 0s linear 0s;
+    }
+  }
+
+  &__left {
+    left: 0;
+    background: linear-gradient(to right, #f0f0f1, rgba(240, 240, 241, 0));
+  }
+
+  &__right {
+    right: 0;
+    background: linear-gradient(to right, rgba(240, 240, 241, 0), #f0f0f1);
+  }
+
+}
